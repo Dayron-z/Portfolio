@@ -1,0 +1,72 @@
+<template>
+  <div id="app">
+    <!-- Incluye el componente GalaxyBackground aquí -->
+    <GalaxyBackground />
+
+    <div class="container">
+      <NavBar />
+      <RouterView />
+    </div>
+  </div>
+</template>
+
+<script>
+import { RouterView } from 'vue-router';
+import NavBar from './components/sections/NavBar.vue';
+import GalaxyBackground from './components/sections/GalaxyBackground.vue'; // Importa tu componente
+
+export default {
+  name: 'App',
+  components: {
+    NavBar,
+    RouterView,
+    GalaxyBackground // Declara el componente
+  }
+};
+</script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #333;
+  color: $gray-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative; /* Necesario para la galaxia */
+}
+
+nav {
+  height: 8%;
+  background-color: #333;
+  color: white;
+}
+
+main {
+  flex: 1;
+  background-color: #f4f4f4;
+}
+</style>
