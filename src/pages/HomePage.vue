@@ -5,10 +5,12 @@
       <galaxy-background />
       <div class="content-about-section">
         <div class="left-about">
-          <h1>Welcome to My Portfolio</h1>
-          <h2>Hi, I am <span>Dayron Zapata</span></h2>
-          <p>A Backend Programmer</p>
-          <p>
+          <h1 class="welcome">Welcome to My Portfolio 😎</h1>
+          <h2 class="i-am">
+            I am <span class="my-name">Dayron Yeins</span>
+          </h2>
+          <p class="a-something">A Backend Programmer</p>
+          <p class="who-i-am">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
             delectus necessitatibus omnis voluptate libero. Error sint unde
             delectus atque suscipit doloribus aliquam reiciendis saepe, rem
@@ -56,12 +58,41 @@ export default {
   display: flex;
   align-items: center;
   z-index: 1;
+  gap: 7.7rem;
+  .left-about {
+    display: flex;
+    flex-direction: column;
+    color: $white-color;
+    font-size: 12px;
+    gap: 7px;
+    .welcome {
+      font-size: 4.2rem;
+    }
+    .i-am {
+      font-size: 22px;
+      .my-name {
+        color: $black-color;
+        margin-left: 4px;
+        font-size: 28px;
+        text-shadow: 0px 1px 14px $white-color;
+        font-weight: bold;
+      }
+    }
+    .a-something {
+      font-size: 18px;
+    }
+    .who-i-am {
+      font-size: 16px;
+      max-width: 450px;
+      text-align: justify;
+    }
+  }
   .profile {
-      border: 5px solid $medium-purple;
-      height: 30.25rem;
-      width: 30.25rem;  
-      border-radius: 100%;
-      object-fit: cover;
+    border: 5px solid $medium-purple;
+    height: 28.25rem;
+    width: 28.25rem;
+    border-radius: 100%;
+    object-fit: cover;
   }
 }
 
@@ -70,7 +101,7 @@ section {
 
 #about {
   background-color: rgba($dark-purple, 0.65); // 0.5 es el nivel de opacidad
-  height: 100vh;
+  height: 90vh;
 }
 
 #skills {
@@ -86,6 +117,6 @@ section {
 #about,
 #skills,
 #contact {
-  padding: 0rem 25%;
+  padding: 0rem 21%;
 }
 </style>
