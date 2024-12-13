@@ -7,8 +7,15 @@
         <div class="left-about">
           <h1>Welcome to My Portfolio</h1>
           <h2>Hi, I am <span>Dayron Zapata</span></h2>
+          <p>A Backend Programmer</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            delectus necessitatibus omnis voluptate libero. Error sint unde
+            delectus atque suscipit doloribus aliquam reiciendis saepe, rem
+            accusamus nostrum voluptatum aut aperiam?
+          </p>
         </div>
-        <div class="right-about"></div>
+        <img class="profile" src="../assets/dayron5.png" />
       </div>
     </section>
 
@@ -44,7 +51,18 @@ export default {
 }
 
 .content-about-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
   z-index: 1;
+  .profile {
+      border: 5px solid $medium-purple;
+      height: 30.25rem;
+      width: 30.25rem;  
+      border-radius: 100%;
+      object-fit: cover;
+  }
 }
 
 section {
