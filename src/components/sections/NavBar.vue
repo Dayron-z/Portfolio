@@ -23,11 +23,11 @@
 
 <style lang="scss" scoped>
 .navbar {
-  background-color:$black-color;
+  background-color:$light-purple;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 10%;
+  padding: 0.5rem 18%;
 
   &-logo {
     a {
