@@ -1,42 +1,43 @@
 <template>
-  <div class="center-section">
-    <!-- Sección Home -->
-    <section id="about" class="galaxy">
+  <div class="home-container">
+    <!-- Sección Inicio -->
+    <section id="about" class="about-section">
       <galaxy-background />
-      <div class="content-about-section">
-        <div class="left-about">
-          <h1 class="welcome">Welcome to My Portfolio 😎</h1>
-          <h2 class="i-am">
-            I am <span class="my-name">Dayron Yeins</span>
+      <div class="about-section__content">
+        <div class="about-section__text">
+          <h1 class="about-section__text__welcome">Welcome to My Portfolio 😎</h1>
+          <h2 class="about-section__text__intro">
+            I am <span class="about-section__text__intro__name">Dayron Yeins</span>
           </h2>
-          <p class="a-something">A Backend Programmer</p>
-          <p class="who-i-am">
+          <p class="about-section__text__role">A Backend Programmer</p>
+          <p class="about-section__text__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
             delectus necessitatibus omnis voluptate libero. Error sint unde
             delectus atque suscipit doloribus aliquam reiciendis saepe, rem
             accusamus nostrum voluptatum aut aperiam?
           </p>
         </div>
-        <img class="profile" src="../assets/dayron5.png" />
+        <img class="about-section__profile" src="../assets/dayron5.png" alt="Profile Image" />
       </div>
     </section>
 
-    <!-- Sección About -->
-    <section id="skills">
-      <h2>About Me</h2>
-      <p>Information about me.</p>
+    <!-- Sección Habilidades -->
+    <section id="skills" class="skills-section">
+      <h2 class="skills-section__title">About Me</h2>
+      <p class="skills-section__info">Information about me.</p>
     </section>
 
-    <!-- Sección Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Details about how to get in touch with me.</p>
+    <!-- Sección Contacto -->
+    <section id="contact" class="contact-section">
+      <h2 class="contact-section__title">Contact</h2>
+      <p class="contact-section__info">Details about how to get in touch with me.</p>
     </section>
   </div>
 </template>
 
 <script>
 import GalaxyBackground from "@/components/sections/GalaxyBackground.vue";
+
 export default {
   components: { GalaxyBackground },
   // eslint-disable-next-line vue/multi-word-component-names
@@ -44,79 +45,104 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped >
-.galaxy {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  position: relative; /* Necesario para la galaxia */
-}
-
-.content-about-section {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  gap: 7.7rem;
-  .left-about {
+<style lang="scss" scoped>
+.home-container {
+  /* Contenedor principal */
+  .about-section {
     display: flex;
     flex-direction: column;
-    color: $white-color;
-    font-size: 12px;
-    gap: 7px;
-    .welcome {
-      font-size: 4.2rem;
+    height: 100vh;
+    position: relative; /* Necesario para la galaxia */
+    padding: 0rem 21%;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: 7.7rem;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
     }
-    .i-am {
-      font-size: 22px;
-      .my-name {
-        color: $black-color;
-        margin-left: 4px;
-        font-size: 28px;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      color: $white-color;
+      gap: 7px;
+
+      &__welcome {
+        font-size: 4.2rem;
         text-shadow: 0px 1px 14px $white-color;
-        font-weight: bold;
+      }
+
+      &__intro {
+        font-size: 2.2rem;
+
+        &__name {
+          color: $black-color;
+          margin-left: 4px;
+          font-size: 2.8rem;
+          text-shadow: 0px 1px 14px $white-color;
+          font-weight: bold;
+        }
+      }
+
+      &__role {
+        font-size: 1.8rem;
+      }
+
+      &__description {
+        font-size: 1.6rem;
+        max-width: 450px;
+        text-align: justify;
       }
     }
-    .a-something {
-      font-size: 18px;
-    }
-    .who-i-am {
-      font-size: 16px;
-      max-width: 450px;
-      text-align: justify;
-    }
-  }
-  .profile {
-    border: 5px solid $medium-purple;
-    height: 28.25rem;
-    width: 28.25rem;
-    border-radius: 100%;
-    object-fit: cover;
-  }
-}
 
-section {
+    &__profile {
+      border: 5px solid $medium-purple;
+      height: 28.25rem;
+      width: 28.25rem;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* Sección Habilidades */
+  .skills-section {
+    background-color: $dark-purple;
+    padding: 0rem 21%;
+    height: 90vh;
+
+    &__title {
+      font-size: 2rem;
+      color: $white-color;
+    }
+
+    &__info {
+      font-size: 1.2rem;
+      color: $gray-color;
+    }
+  }
+
+  /* Sección Contacto */
+  .contact-section {
+    background-color: $medium-purple;
+    padding: 0rem 21%;
+    height: 90vh;
+
+    &__title {
+      font-size: 2rem;
+      color: $white-color;
+    }
+
+    &__info {
+      font-size: 1.2rem;
+      color: $gray-color;
+    }
+  }
 }
 
 #about {
-  background-color: rgba($dark-purple, 0.65); // 0.5 es el nivel de opacidad
-  height: 90vh;
-}
-
-#skills {
-  background-color: $dark-purple;
-  height: 90vh;
-}
-
-#contact {
-  background-color: $medium-purple;
-  height: 90vh;
-}
-
-#about,
-#skills,
-#contact {
-  padding: 0rem 21%;
+  background-color: rgba($dark-purple, 0.65); /* 0.5 es el nivel de opacidad */
 }
 </style>

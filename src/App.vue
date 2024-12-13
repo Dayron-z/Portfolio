@@ -1,11 +1,15 @@
 <template>
   <div id="app">
-    <!-- Incluye el componente GalaxyBackground aquí -->
+    <!-- Incluye el componente GalaxyBackground -->
     <!-- <GalaxyBackground /> -->
 
-    <div class="container">
-      <NavBar />
-      <RouterView />
+    <div class="layout-container">
+      <header class="layout-container__navbar">
+        <NavBar />
+      </header>
+      <main class="layout-container__content">
+        <RouterView />
+      </main>
     </div>
   </div>
 </template>
@@ -39,7 +43,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #333;
-  color: $gray-color;
+  color: #ccc;
 }
 
 html {
@@ -49,13 +53,23 @@ html {
 #app {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
-nav {
-  height: 8%;
-  background-color: #333;
-  color: white;
+  &__navbar {
+    height: 8%;
+    background-color: #333;
+    color: white;
+  }
+
+  &__content {
+    flex: 1;
+    background-color: #222;
+  }
 }
-
 </style>
