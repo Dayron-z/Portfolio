@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <!-- Incluye el componente GalaxyBackground -->
-    <!-- <GalaxyBackground /> -->
-
     <div class="layout-container">
       <header class="layout-container__navbar">
         <NavBar />
@@ -17,14 +14,11 @@
 <script>
 import { RouterView } from 'vue-router';
 import NavBar from './components/sections/NavBar.vue';
-// import GalaxyBackground from './components/sections/GalaxyBackground.vue'; // Importa tu componente
-
 export default {
   name: 'App',
   components: {
     NavBar,
     RouterView,
-    // GalaxyBackground // Declara el componente
   }
 };
 </script>
@@ -59,17 +53,13 @@ html {
 .layout-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
 
   &__navbar {
     height: 8%;
-    background-color: #333;
-    color: white;
   }
 
   &__content {
     flex: 1;
-    background-color: #222;
   }
 }
 </style>

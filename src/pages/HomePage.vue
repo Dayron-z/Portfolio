@@ -2,7 +2,6 @@
   <div class="home-container">
     <!-- Sección Inicio -->
     <section id="about" class="about-section">
-      <galaxy-background />
       <div class="about-section__content">
         <div class="about-section__text">
           <h1 class="about-section__text__welcome">Welcome to My Portfolio 😎</h1>
@@ -36,10 +35,8 @@
 </template>
 
 <script>
-import GalaxyBackground from "@/components/sections/GalaxyBackground.vue";
 
 export default {
-  components: { GalaxyBackground },
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Home",
 };
@@ -71,28 +68,28 @@ export default {
       gap: 7px;
 
       &__welcome {
-        font-size: 4.2rem;
+        font-size: 3.2rem;
         text-shadow: 0px 1px 14px $white-color;
       }
 
       &__intro {
-        font-size: 2.2rem;
+        font-size: 1.7rem;
 
         &__name {
-          color: $black-color;
+          color: $white-color;
           margin-left: 4px;
-          font-size: 2.8rem;
+          font-size: 1.8rem;
           text-shadow: 0px 1px 14px $white-color;
           font-weight: bold;
         }
       }
 
       &__role {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
 
       &__description {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         max-width: 450px;
         text-align: justify;
       }
