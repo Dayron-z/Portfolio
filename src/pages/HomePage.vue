@@ -106,9 +106,9 @@ export default {
 
   /* Sección Habilidades */
   .skills-section {
-    background-color: $dark-purple;
-    padding: 0rem 21%;
-    height: 90vh;
+
+    padding: 20rem 21%;
+
 
     &__title {
       font-size: 2rem;
@@ -123,7 +123,6 @@ export default {
 
   /* Sección Contacto */
   .contact-section {
-    background-color: $medium-purple;
     padding: 0rem 21%;
     height: 90vh;
 
@@ -139,7 +138,5 @@ export default {
   }
 }
 
-#about {
-  background-color: rgba($dark-purple, 0.65); /* 0.5 es el nivel de opacidad */
-}
+
 </style>
